@@ -2,7 +2,7 @@
 FROM twingate/connector:1
 
 # Set sysctl parameter
-RUN sysctl -w net.ipv4.ping_group_range="0 2147483647"
+RUN ["/bin/bash", "-c", "sysctl -w net.ipv4.ping_group_range='0 2147483647'"]
 
 # Set environment variables
 ENV TWINGATE_NETWORK="digitaldust" \
