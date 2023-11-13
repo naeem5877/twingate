@@ -1,8 +1,0 @@
-# docker-compose.yml
-version: '3'
-services:
-  cloud-shell:
-    build:
-      context: .
-    ports:
-      - "8080:8080"
