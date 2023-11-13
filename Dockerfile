@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 # Install required packages
 RUN apt-get update && \
-    apt-get install -y shellinabox
+    DEBIAN_FRONTEND=noninteractive apt-get install -y shellinabox
 
 # Expose the default port for Shell in a Box
 EXPOSE 4200
